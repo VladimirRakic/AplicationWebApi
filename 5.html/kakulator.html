@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+<label for=""> 1-st number</label> <input type="text" id="firstNumber" /><br><br>
+<label for=""> 2-nd number</label> <input type="text" id="secondNumber" /><br><br>
+<button onclick="saberi()"> Saberi</button>
+<button onclick="oduzmi()"> Oduzmi</button>
+<button onclick="pomnozi()"> Pomnnozi</button>
+<button onclick="podeli()"> Podeli</button> <br><br>
+
+<label for=""> Rezultat operacije je : </label> <br><br>
+<span id = "result"></span>
+
+    </form>
+
+    <script>
+
+        function saberi(){
+        var a = document.getElementById("firstNumber");
+        var b = document.getElementById("secondNumber");
+        document.getElementById("result").innerHTML = a+b;
+        }
+       
+        function oduzmi(){
+        var a = document.getElementById("firstNumber");
+        var b = document.getElementById("secondNumber");
+        document.getElementById("result").innerHTML = a-b;
+        }
+
+        function pomnozi(){
+        a = document.getElementById("firstNumber");
+        b = document.getElementById("secondNumber");
+        document.getElementById("result").innerHTML = a*b;
+        }
+
+        function podeli(){
+        var a = document.getElementById("firstNumber");
+        var b = document.getElementById("secondNumber");
+        document.getElementById("result").innerHTML = a/b;
+        }
+
+  
+
+    </script>
+
+</body>
+</html>

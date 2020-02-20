@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script> //JavaScript: Compute the sum of the two given integers
+    var sumiranje = function(i,j){
+        if (i === j) {
+            sum = (i+j)*3;
+        }else{
+            sum = i+j
+        }
+        console.log(sum);
+    }
+    //JavaScript: Get the extension of a filename
+    //abc.java  - izvuci java
+    var izvuci = function(text){
+        var nizPodeljen = text.split('.')
+        console.log(nizPodeljen);
+        var staMitreba = nizPodeljen.pop();
+        console.log(staMitreba);
+    }
+
+
+//PeraPeric@testserver.org"- domaci izvuci korisnicko ime; 
+//korisnicko ime, server, domen, prvi karakter niza
+//PeraPeric - korisnicko ime; 
+
+        var domacin = function(){
+            var text = "PeraPeric@testserver.org";
+            var prviKarakter = text.slice(0, 1);
+            console.log(prviKarakter);
+            var delovi = text.split('@');
+            console.log(delovi);
+            var ime = delovi[0];
+            console.log(ime);
+            var domenPokusaj = delovi[1].split('.');
+            console.log(domenPokusaj);
+            var server = domenPokusaj[0];
+            var domen = domenPokusaj[1];
+           // alert(domen[1]);
+           console.log(server);
+           console.log(domen);
+
+        } 
+
+    </script>
+</body>
+</html>

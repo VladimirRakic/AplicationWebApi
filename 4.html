@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    var maxNadji = function(){
+        var arr = new Array(4,5,8,46)
+        var maxElement = arr[0];//ovde je ok ali kad je bio dole u for je undifined
+        for (let index = 0; arr < arr.length; index++) {
+           if(arr[i]>maxElement)
+           maxElement= arr[i];
+        }
+        alert(maxElement);
+    }
+
+    var parnost = function(){
+        for (let index = 1; index <= 15; index++) {
+           if (index%2 == 0) {
+               alert("Broj" + index +"je paran")
+           }else{
+               alert("Broj" + index +" je neparan")
+           }
+        }
+    }
+
+    var dajOceneZaStudente = function(){
+        var arr = new Array(80,77,88,95,68);
+        var suma = 0;
+        var prosek = 0;
+        for (let index = 0; index < arr.length; index++) {
+            suma=suma+arr[index];
+            broj = arr.length;
+            prosek = suma/broj;
+        }
+    alert(prosek);            
+        if(prosek<60){
+            alert("F")
+        }else if(prosek<70){
+            alert("D")
+        }else if(prosek<80){
+            alert("C")
+        }else(prosek<90)
+            alert("B")
+        
+    }
+
+/*  - ne pisem lepo taj switc verovatno
+            switch(prosek) {
+                case prosek<60:
+                alert("Prosek ocena je F")
+                break;
+                case prosek<70:
+                alert("Prosek ocena je D")
+                break;
+                case prosek<80:
+                alert("Prosek ocena je C")
+                break;
+                case prosek<90:
+                alert("Prosek ocena je B")
+                break;
+                case prosek<100:
+                alert("Prosek ocena je B")
+                break;
+            } */
+
+    //    var iterate = () => 
+    //    for (let o = 0; o < 100; i++) {
+    //        const element = array[index];
+           
+    //    }
+      
+   var iterate = function(){
+    for (let index = 1; index < 100; index++) {
+        if(index%3 === 0){
+            console.log("Fizz")
+        }else if(index%5 === 0){
+            console.log("Buzz")
+        }else if(index%3 === 0 && index%5 === 0){
+           console.log("fizzBuzz")
+        }else
+        console.log(index);
+      }
+      //sto pise za poslendnjeg undifined
+   }
+
+   var vritFive = function(){
+    var havarijaje;
+
+   }
+  
+   var armstrong = function(i,j,k){
+       var sum1 = Math.pow(i,3)+Math.pow(j,3)+Math.pow(k,3)
+       var sum2 = (i*100 + j*10 + k*1);
+       if (sum1 == sum2) {
+           console.log(sum1);
+       }else console.log("Stampaj sta oces")
+   }
+
+    function pera(i,j,k){
+       var suma = (i+j+k)
+        console.log(suma);//vezbao sam poziv funkcije kroz consolu
+   }
+    
+    var svi = () => {
+    var sum = 0;
+    for (let i = 0; i < 100; i++) {
+      if ( i%3 ===0 || i%5 ===0) {
+          sum+=i;
+      }
+    }
+    console.log(sum);
+}
+         
+    var palindrom = function(){ // tu nece da mi radi kad prosledim madam nzm sto kaze undifined
+           var text = "madamtmadam";//ja ga piso al nije tu meni sve bas najjasnije u debaggingu
+            for (let i = 0; i < text.length/2; i++) {
+                if(text[i] == text[text.length-1-i]){
+                    continue;
+                    return false;
+                }else{
+                    alert("Nije palindrom")
+                    return true;
+                }
+            }
+           alert("Jeste palindrom")
+        }
+
+        var praviPalindron = function(){
+            var text = "madam" // nurses run; fox
+            var a = text[0];
+            var b = text[text.length-1];
+            while(b>a){
+                    a++;
+                    b--;
+                    if(a != b)
+                    return false;                   
+                }
+                    return true;
+            }
+
+            var getRadndomNum = function(){
+                var niz = new Array(15,14,84,65,94);
+                var daj = niz[Math.floor(Math.random()*niz.length)];
+                console.log(daj);
+            }
+
+            var predNajvisiIPredNajnizi = function(){
+                var niz = [11,4,15,65,978,548];//sortiraj niz opadajucei onda daj drugi element i predposlednji
+                for (let i = 0; i < niz.length-1; i++) {
+                    for (let j = i+1; j < niz.length; j++) {
+                       if(niz[i]<niz[j]){
+                            temp = niz[i];
+                            niz[i]= niz[j];
+                            niz[j] = temp;
+                       }
+                    }
+                }
+                console.log(niz);
+                var predposlednjiNajvisi = niz[1];
+                var predposlednjiNajnizi= niz[niz.length-2];
+                console.log(predposlednjiNajvisi);
+                console.log(predposlednjiNajnizi);
+            }
+
+
+
+
+            var nizbrojeva = [11,4,15,65,978,548];
+            var ajmoOpet = function(nizbrojeva){
+                for (let i = 0; i < nizbrojeva.length-1; i++) {//tu se javlja uvek to sranje undifined kao da ne vidi prosledjen parametar
+                    for (let j = i+1; j < nizbrojeva.length; j++) {
+                       if(nizbrojeva[i]<nizbrojeva[j]){
+                            temp = nizbrojeva[i];
+                            nizbrojeva[i]= nizbrojeva[j];
+                            nizbrojeva[j] = temp;
+                       }
+                    }
+                }
+                console.log(niz);
+                var predposlednjiNajvisi = nizbrojeva[1];
+                var predposlednjiNajnizi= nizbrojeva[nizbrojeva.length-2];
+                console.log(predposlednjiNajvisi);
+                console.log(predposlednjiNajnizi);
+            }
+
+            
+
+    </script>
+</body>
+</html>

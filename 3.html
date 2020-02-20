@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+  var arr = new Array(25,14,45,87,99,77); // ne znam zasto funkcija ne vidi moj arr
+    var sort = function(arr){
+       // var arr = new Array(25,14,45,87,99,77);
+        for(var i = 0;i<arr.length-1; i++){
+            for (let j = i+1; j < arr.length; j++) {
+               if(arr[i]<arr[j]){
+               var temp = arr[i]
+               arr[i]=arr[j]
+               arr[j] = temp;
+                }
+            }
+        }
+    alert(arr);
+    }
+
+var bubbleSort = function(){//od najmanjeg do najveceg sortirra
+    var niz = [5,-45,42,11,5]
+    for (let i = 0; i < niz.length-1; i++) {
+        for (let j = i+1; j < niz.length; j++) {
+            if (niz[j]< niz[i]) {
+                temp = niz[i];
+                niz[i] = niz[j];
+                niz[j] = temp;
+            }
+        }
+}
+alert(niz);
+}
+
+
+var nizbrojeva = [11,4,15,65,978,548];
+            var ajmoOpet = function(nizbrojeva){
+                for (let i = 0; i < nizbrojeva.length-1; i++) {//tu se javlja uvek to sranje undifined kao da ne vidi prosledjen parametar
+                    for (let j = i+1; j < nizbrojeva.length; j++) {
+                       if(nizbrojeva[i]<nizbrojeva[j]){
+                            temp = nizbrojeva[i];
+                            nizbrojeva[i]= nizbrojeva[j];
+                            nizbrojeva[j] = temp;
+                       }
+                    }
+                }
+                console.log(niz);
+                var predposlednjiNajvisi = nizbrojeva[1];
+                var predposlednjiNajnizi= nizbrojeva[nizbrojeva.length-2];
+                console.log(predposlednjiNajvisi);
+                console.log(predposlednjiNajnizi);
+            }
+
+        var findBigger = function(a){
+            var brojevi = [45,4,65,84,6,1];
+            var vratiBrojeve = new Array();
+            for (let index = 0; index < brojevi.length; index++) {
+                if(brojevi[index]>a){
+                    vratiBrojeve.push(brojevi[index])
+                }
+            }
+            return vratiBrojeve;
+        }
+
+        var binarySearch = function(a){
+            var nizZaPretragu = new Array(4,8,68,89,90); //oovde mi ispada jer ili left ili right mi ispadaju po 3.5 , 1.5
+            //i onda ne moze to lepoo da podeli pa zavrsava kod nema tog broja uvek jer pristupa
+            //medium[1.5] ili 3.5 a to ne postoji
+            var left = 0;
+            var right = nizZaPretragu.length-1;
+            while(left<=right){
+                var medium = left+ (right-left)/2;
+                medium = Math.floor(medium);//dal smem ovo da ubacim majko moja
+                if(nizZaPretragu[medium] == a){
+                    console.log(medium);
+                    return nizZaPretragu[medium];
+                }
+                if(nizZaPretragu[medium]>a){
+                    right = medium-1;
+                }else{
+                    left = medium+1;
+                }
+            }
+            console.log("nema tog proja u nizu")
+            return -1;
+        }
+
+        </script>
+
+</body>
+</html>
